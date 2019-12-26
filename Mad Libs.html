@@ -24,7 +24,10 @@
         var libButton = document.getElementById('lib-button');
         var libIt = function() {
             var storyDiv = document.getElementById("story");
-            storyDiv.innerHTML = "??Your story here";
+            var noun = document.getElementById("noun").value;
+            var adj = document.getElementById("adjective").value;
+            var name = document.getElementById("person").value;
+            storyDiv.innerHTML = "the person beside " + noun + " is "+adj+ " than " + name;
         };
         libButton.addEventListener('click', libIt);
         

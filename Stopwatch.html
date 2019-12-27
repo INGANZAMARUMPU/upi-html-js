@@ -19,10 +19,11 @@
             
             // How can you make it stop counting?
             var stopCountUp = function() {
+                window.clearInterval(counter);
             };
             var stopButton = document.getElementById("stop-button");
             stopButton.addEventListener("click", stopCountUp);
-            window.setInterval(countUp, 1000);
+            var counter = window.setInterval(countUp, 1000);
         </script>
     </body>
 </html>

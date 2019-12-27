@@ -14,7 +14,7 @@
             // Make it count up on a timer, calling this function
             var seconds = document.getElementById("seconds");
             var countUp = function() {
-                // ?
+                seconds.textContent=parseFloat(seconds.textContent)+1+"px";
             };
             
             // How can you make it stop counting?
@@ -22,8 +22,7 @@
             };
             var stopButton = document.getElementById("stop-button");
             stopButton.addEventListener("click", stopCountUp);
-            
+            window.setInterval(countUp, 1000);
         </script>
     </body>
 </html>
-

@@ -20,9 +20,13 @@
   var catEl = document.getElementById("cat");
   
   var startTime = new Date().getTime();
+  var left = parseFloat(catEl.style.left);
   var walkTheCat = function() {
       var currTime = new Date().getTime();
       var secondsElapsed = ((currTime - startTime)/1000);
+      var newLeft = parseFloat(catEl.style.left)+secondsElapsed*30;
+      catEl.style.left=newLeft+"px";
+      window.requestAnimationFrame(walkTheCat);
   };
   walkTheCat();
   </script>
